@@ -32,10 +32,11 @@ namespace IS_20_SmolinSD
                 //Отображаем рабочую форму
                 this.Show();
                 //Вытаскиваем из класса поля в label'ы
-                metroLabel1.ForeColor = Color.GreenYellow;
-                metroLabel1.Text = Auth.auth_id;
-                metroLabel1.Text = Auth.auth_fio;
-                metroLabel1.Text = $"Здравствуйте, {Auth.auth_fio}";
+                metroLabel3.ForeColor = Color.GreenYellow;
+                metroLabel3.Text = Auth.auth_id;
+                metroLabel3.Text = Auth.auth_fio;
+                metroLabel3.Text = $"Здравствуйте, {Auth.auth_fio}";
+                metroLabel2.Text = $"Вход выполнен!";
                 //Красим текст в label в зелёный цвет
             }
             //иначе
@@ -44,6 +45,21 @@ namespace IS_20_SmolinSD
                 //Закрываем форму
                 this.Close();
             }
+        }
+
+        private void metroLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

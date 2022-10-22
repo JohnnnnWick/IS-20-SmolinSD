@@ -14,7 +14,7 @@ namespace IS_20_SmolinSD
     public partial class Authh : MetroFramework.Forms.MetroForm
     {
         // строка подключения к БД
-        string connStr = "server=chuc.caseum.ru;port=33333;user=st_1_20_27;database=is_1_20_st27_KURS;password=56251553;";
+        string connStr = "server=10.90.12.110;port=33333;user=st_1_20_27;database=is_1_20_st27_KURS;password=56251553;";
         //Переменная соединения
         MySqlConnection conn;
         //Логин и пароль к данной форме Вы сможете посмотреть в БД db_test таблице t_user
