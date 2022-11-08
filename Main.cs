@@ -36,7 +36,7 @@ namespace IS_20_SmolinSD
                 metroLabel3.Text = Auth.auth_id;
                 metroLabel3.Text = Auth.auth_fio;
                 metroLabel3.Text = $"Здравствуйте, {Auth.auth_fio}";
-                metroLabel2.Text = $"Вход выполнен!";
+                metroLabel2.Text = $"Вход выполнен успешно!";
                 //Красим текст в label в зелёный цвет
             }
             //иначе
@@ -49,7 +49,7 @@ namespace IS_20_SmolinSD
 
         private void metroLabel2_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
@@ -60,6 +60,18 @@ namespace IS_20_SmolinSD
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void metroButton5_Click(object sender, EventArgs e)
+        {
+            //Сокрытие текущей формы
+            this.Hide();
+            //Инициализируем и вызываем форму диалога авторизации
+            Authh f = new Authh();
+            //Вызов формы в режиме диалога
+            f.ShowDialog();
+
+            this.Close();
         }
     }
 }

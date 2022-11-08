@@ -28,53 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.metroButton4 = new MetroFramework.Controls.MetroButton();
             this.metroButton5 = new MetroFramework.Controls.MetroButton();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(23, 105);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(104, 19);
-            this.metroLabel2.TabIndex = 1;
-            this.metroLabel2.Text = "Вход выполнен";
-            this.metroLabel2.Click += new System.EventHandler(this.metroLabel2_Click);
             // 
             // metroButton1
             // 
-            this.metroButton1.BackColor = System.Drawing.Color.Red;
-            this.metroButton1.Location = new System.Drawing.Point(20, 209);
+            this.metroButton1.BackColor = System.Drawing.Color.White;
+            this.metroButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroButton1.BackgroundImage")));
+            this.metroButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.metroButton1.Location = new System.Drawing.Point(20, 218);
             this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(107, 26);
+            this.metroButton1.Size = new System.Drawing.Size(79, 80);
             this.metroButton1.TabIndex = 2;
-            this.metroButton1.Text = "Услуги";
+            this.metroButton1.Text = "Приёмы";
+            this.metroButton1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.metroButton1.UseSelectable = true;
             // 
             // metroButton2
             // 
-            this.metroButton2.Location = new System.Drawing.Point(20, 253);
+            this.metroButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroButton2.BackgroundImage")));
+            this.metroButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.metroButton2.Location = new System.Drawing.Point(126, 121);
             this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(107, 26);
+            this.metroButton2.Size = new System.Drawing.Size(79, 80);
             this.metroButton2.TabIndex = 4;
-            this.metroButton2.Text = "Записи пациентов";
+            this.metroButton2.Text = "Пациенты";
+            this.metroButton2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.metroButton2.UseSelectable = true;
             // 
             // metroButton3
             // 
-            this.metroButton3.Location = new System.Drawing.Point(20, 164);
+            this.metroButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroButton3.BackgroundImage")));
+            this.metroButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.metroButton3.Location = new System.Drawing.Point(126, 218);
             this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(107, 28);
+            this.metroButton3.Size = new System.Drawing.Size(79, 80);
             this.metroButton3.TabIndex = 5;
-            this.metroButton3.Text = "Выдать зарплату";
+            this.metroButton3.Text = "Расчёт з/п";
+            this.metroButton3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.metroButton3.UseSelectable = true;
             // 
             // metroLabel1
@@ -89,43 +88,53 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(155, 105);
+            this.metroLabel3.Location = new System.Drawing.Point(23, 60);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(158, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(94, 19);
             this.metroLabel3.TabIndex = 7;
-            this.metroLabel3.Text = "здравствуйте блаблабла";
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Location = new System.Drawing.Point(20, 60);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(746, 25);
-            this.toolStrip1.TabIndex = 9;
-            this.toolStrip1.Text = "toolStrip1";
+            this.metroLabel3.Text = "Здравствуйте ";
             // 
             // metroButton4
             // 
-            this.metroButton4.Location = new System.Drawing.Point(20, 297);
+            this.metroButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroButton4.BackgroundImage")));
+            this.metroButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.metroButton4.Location = new System.Drawing.Point(20, 121);
             this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(133, 28);
+            this.metroButton4.Size = new System.Drawing.Size(80, 80);
             this.metroButton4.TabIndex = 10;
-            this.metroButton4.Text = "Акции и предложения";
+            this.metroButton4.Text = "Акции";
+            this.metroButton4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.metroButton4.UseSelectable = true;
             // 
             // metroButton5
             // 
-            this.metroButton5.Location = new System.Drawing.Point(20, 345);
+            this.metroButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroButton5.BackgroundImage")));
+            this.metroButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.metroButton5.Location = new System.Drawing.Point(20, 380);
             this.metroButton5.Name = "metroButton5";
-            this.metroButton5.Size = new System.Drawing.Size(119, 30);
+            this.metroButton5.Size = new System.Drawing.Size(60, 52);
             this.metroButton5.TabIndex = 11;
-            this.metroButton5.Text = "Уволиться";
+            this.metroButton5.Text = "Выход";
+            this.metroButton5.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.metroButton5.UseSelectable = true;
+            this.metroButton5.Click += new System.EventHandler(this.metroButton5_Click);
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(20, 346);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(104, 19);
+            this.metroLabel2.TabIndex = 1;
+            this.metroLabel2.Text = "Вход выполнен";
+            this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel2.Click += new System.EventHandler(this.metroLabel2_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(786, 467);
+            this.ClientSize = new System.Drawing.Size(406, 467);
             this.Controls.Add(this.metroButton5);
             this.Controls.Add(this.metroButton4);
             this.Controls.Add(this.metroLabel3);
@@ -134,9 +143,9 @@
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.metroLabel2);
-            this.Controls.Add(this.toolStrip1);
             this.Name = "Main";
-            this.Text = "Form1";
+            this.Style = MetroFramework.MetroColorStyle.Red;
+            this.Text = "Личный кабинет";
             this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -144,15 +153,14 @@
         }
 
         #endregion
-        private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroButton metroButton2;
         private MetroFramework.Controls.MetroButton metroButton3;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel3;
-        private System.Windows.Forms.ToolStrip toolStrip1;
         private MetroFramework.Controls.MetroButton metroButton4;
         private MetroFramework.Controls.MetroButton metroButton5;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
     }
 }
 
