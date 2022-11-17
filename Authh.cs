@@ -38,7 +38,7 @@ namespace IS_20_SmolinSD
         public void GetUserInfo(string login_user)
         {
             //Объявлем переменную для запроса в БД
-            string selected_id_stud = metroTextBox1.Text;
+            string selected_id_stud = textBox1.Text;
             // устанавливаем соединение с БД
             conn.Open();
             // запрос
@@ -75,8 +75,8 @@ namespace IS_20_SmolinSD
             command.Parameters.Add("@un", MySqlDbType.VarChar, 25);
             command.Parameters.Add("@up", MySqlDbType.VarChar, 25);
             //Присваиваем параметрам значение
-            command.Parameters["@un"].Value = metroTextBox1.Text;
-            command.Parameters["@up"].Value = sha256(metroTextBox2.Text);
+            command.Parameters["@un"].Value = textBox1.Text;
+            command.Parameters["@up"].Value = sha256(textBox2.Text);
             //Заносим команду в адаптер
             adapter.SelectCommand = command;
             //Заполняем таблицу
@@ -89,7 +89,7 @@ namespace IS_20_SmolinSD
                 //Присваеваем глобальный признак авторизации
                 Auth.auth = true;
                 //Достаем данные пользователя в случае успеха
-                GetUserInfo(metroTextBox1.Text);
+                GetUserInfo(textBox1.Text);
                 //Закрываем форму
                 this.Close();
             }
@@ -123,6 +123,21 @@ namespace IS_20_SmolinSD
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void metroTextBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroTextBox1_Enter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            textBox1.Clear();
         }
     }
 }

@@ -63,6 +63,7 @@
             this.metroButton2.Text = "Пациенты";
             this.metroButton2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
             // metroButton3
             // 

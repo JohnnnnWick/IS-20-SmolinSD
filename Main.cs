@@ -43,7 +43,7 @@ namespace IS_20_SmolinSD
             else
             {
                 //Закрываем форму
-                this.Close();
+                Application.Exit();
             }
         }
 
@@ -72,6 +72,11 @@ namespace IS_20_SmolinSD
             f.ShowDialog();
 
             this.Close();
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
