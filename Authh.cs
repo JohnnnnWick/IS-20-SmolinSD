@@ -11,7 +11,7 @@ using MySql.Data.MySqlClient;
 
 namespace IS_20_SmolinSD
 {   
-    public partial class Authh : MetroFramework.Forms.MetroForm
+    public partial class Authh : Form
     {
         // строка подключения к БД
         string connStr = "server=10.90.12.110;port=33333;user=st_1_20_27;database=is_1_20_st27_KURS;password=56251553;";
@@ -38,7 +38,7 @@ namespace IS_20_SmolinSD
         public void GetUserInfo(string login_user)
         {
             //Объявлем переменную для запроса в БД
-            string selected_id_stud = textBox1.Text;
+            string selected_id_stud = guna2TextBox1.Text; 
             // устанавливаем соединение с БД
             conn.Open();
             // запрос
@@ -59,7 +59,7 @@ namespace IS_20_SmolinSD
             // закрываем соединение с БД
             conn.Close();
         }
-        private void metroButton1_Click(object sender, EventArgs e)
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
             //Запрос в БД на предмет того, если ли строка с подходящим логином и паролем
             string sql = "SELECT * FROM Doctors WHERE login = @un and password= @up";
@@ -75,8 +75,8 @@ namespace IS_20_SmolinSD
             command.Parameters.Add("@un", MySqlDbType.VarChar, 25);
             command.Parameters.Add("@up", MySqlDbType.VarChar, 25);
             //Присваиваем параметрам значение
-            command.Parameters["@un"].Value = textBox1.Text;
-            command.Parameters["@up"].Value = sha256(textBox2.Text);
+            command.Parameters["@un"].Value = guna2TextBox1.Text;
+            command.Parameters["@up"].Value = sha256(guna2TextBox2.Text);
             //Заносим команду в адаптер
             adapter.SelectCommand = command;
             //Заполняем таблицу
@@ -89,7 +89,7 @@ namespace IS_20_SmolinSD
                 //Присваеваем глобальный признак авторизации
                 Auth.auth = true;
                 //Достаем данные пользователя в случае успеха
-                GetUserInfo(textBox1.Text);
+                GetUserInfo(guna2TextBox1.Text);
                 //Закрываем форму
                 this.Close();
             }
@@ -104,12 +104,6 @@ namespace IS_20_SmolinSD
         {
             conn = new MySqlConnection(connStr);
         }
-
-        private void metroButton2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -137,7 +131,93 @@ namespace IS_20_SmolinSD
 
         private void textBox1_Enter(object sender, EventArgs e)
         {
-            textBox1.Clear();
+            
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_Enter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void guna2Button1_Enter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void guna2TextBox2_Enter(object sender, EventArgs e)
+        {
+            guna2TextBox2.Clear();
+        }
+
+        private void guna2TextBox1_Enter(object sender, EventArgs e)
+        {
+            guna2TextBox1.Clear();
+        }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void guna2Button1_Click_1(object sender, EventArgs e)
+        {
+            //Запрос в БД на предмет того, если ли строка с подходящим логином и паролем
+            string sql = "SELECT * FROM Doctors WHERE login = @un and password= @up";
+            //Открытие соединения
+            conn.Open();
+            //Объявляем таблицу
+            DataTable table = new DataTable();
+            //Объявляем адаптер
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            //Объявляем команду
+            MySqlCommand command = new MySqlCommand(sql, conn);
+            //Определяем параметры
+            command.Parameters.Add("@un", MySqlDbType.VarChar, 25);
+            command.Parameters.Add("@up", MySqlDbType.VarChar, 25);
+            //Присваиваем параметрам значение
+            command.Parameters["@un"].Value = guna2TextBox1.Text;
+            command.Parameters["@up"].Value = sha256(guna2TextBox2.Text);
+            //Заносим команду в адаптер
+            adapter.SelectCommand = command;
+            //Заполняем таблицу
+            adapter.Fill(table);
+            //Закрываем соединение
+            conn.Close();
+            //Если вернулась больше 0 строк, значит такой пользователь существует
+            if (table.Rows.Count > 0)
+            {
+                //Присваеваем глобальный признак авторизации
+                Auth.auth = true;
+                //Достаем данные пользователя в случае успеха
+                GetUserInfo(guna2TextBox1.Text);
+                //Закрываем форму
+                this.Close();
+            }
+            else
+            {
+                //Отобразить сообщение о том, что авторизаия неуспешна
+                MessageBox.Show("Неверные данные авторизации!");
+            }
         }
     }
 }
