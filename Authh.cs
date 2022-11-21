@@ -21,6 +21,9 @@ namespace IS_20_SmolinSD
         public Authh()
         {
             InitializeComponent();
+            KeyPreview = true;
+            KeyDown += (s, e) => { if (e.KeyValue == (char)Keys.Enter ) guna2Button1_Click_1(guna2Button1, null); };
+            KeyDown += (s, e) => { if (e.KeyValue == (char)Keys.Escape) guna2ControlBox1_Click(guna2ControlBox1, null); };
         }
         static string sha256(string randomString)
         {
@@ -217,6 +220,22 @@ namespace IS_20_SmolinSD
             {
                 //Отобразить сообщение о том, что авторизаия неуспешна
                 MessageBox.Show("Неверные данные авторизации!");
+            }
+        }
+
+        private void guna2Button1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue == (char)Keys.Enter)
+            {
+                guna2Button1_Click_1(guna2Button1, null);
+            }
+        }
+
+        private void guna2ControlBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue == (char)Keys.Escape)
+            {
+                guna2ControlBox1_Click(guna2ControlBox1, null);
             }
         }
     }

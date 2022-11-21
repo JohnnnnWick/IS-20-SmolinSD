@@ -36,7 +36,7 @@ namespace IS_20_SmolinSD
                 metroLabel3.Text = Auth.auth_id;
                 metroLabel3.Text = Auth.auth_fio;
                 metroLabel3.Text = $"Здравствуйте, {Auth.auth_fio}";
-                metroLabel2.Text = $"Вход выполнен успешно!";
+                metroLabel3.Text = $"Вход выполнен успешно!";
                 //Красим текст в label в зелёный цвет
             }
             //иначе
@@ -80,6 +80,11 @@ namespace IS_20_SmolinSD
         }
 
         private void metroButton4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel3_Click(object sender, EventArgs e)
         {
 
         }

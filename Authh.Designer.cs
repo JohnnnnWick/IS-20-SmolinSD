@@ -125,6 +125,7 @@
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 12;
             this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
+            this.guna2ControlBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.guna2ControlBox1_KeyDown);
             // 
             // guna2Button1
             // 
@@ -144,14 +145,16 @@
             this.guna2Button1.TabIndex = 13;
             this.guna2Button1.Text = "Войти";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click_1);
+            this.guna2Button1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.guna2Button1_KeyDown);
             // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(199, 551);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(3, 2);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(0, 0);
             this.guna2HtmlLabel1.TabIndex = 14;
+            this.guna2HtmlLabel1.Text = null;
             // 
             // guna2HtmlLabel2
             // 
