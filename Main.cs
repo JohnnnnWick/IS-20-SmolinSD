@@ -88,5 +88,17 @@ namespace IS_20_SmolinSD
         {
 
         }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            //Сокрытие текущей формы
+            this.Hide();
+            //Инициализируем и вызываем форму диалога авторизации
+            Authh f = new Authh();
+            //Вызов формы в режиме диалога
+            f.ShowDialog();
+
+            this.Close();
+        }
     }
 }
